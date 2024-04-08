@@ -68,7 +68,7 @@ public class Createmenu {
             try {
                 System.out.println("-------------------------------\n");
                 System.out.println("Menu Funcionário: " + funcionario.getNome() );
-                System.out.println("Digite uma opção: \n");
+                System.out.println("\nDigite uma opção: \n");
                 System.out.println("1. Cadastrar cliente");
                 System.out.println("2. Realizar transação");
                 System.out.println("3. Remover cliente");
@@ -182,16 +182,19 @@ public class Createmenu {
                         String idSelecionar = scanner.nextLine();
                         Cliente clienteSelecionado = repositorioCliente.buscarCliente(idSelecionar);
                         if (clienteSelecionado != null) {
-                            System.out.println("Cliente selecionado: " + clienteSelecionado);
                             String opcaoFachada = "";
                             while (!opcaoFachada.equals("4")) {
+                                System.out.println("-------------------------------\n");
                                 System.out.println("Menu de transação \n");
-                                System.out.println("Digite uma opção:\n");
+                                System.out.println("Cliente selecionado: " + clienteSelecionado.getNome());
+                                System.out.println("\nDigite uma opção:\n");
                                 System.out.println("1.Compra");
                                 System.out.println("2.Venda");
                                 System.out.println("3.Troca");
                                 System.out.println("4. Voltar");
+                                System.out.println("\n-------------------------------");
                                 opcaoFachada = scanner.nextLine();
+                                System.out.println("-------------------------------");
 
                                 switch (opcaoFachada) {
                                     case "1":
